@@ -13,6 +13,6 @@ curl --location --request POST 'http://localhost:8080/payment/consent/0015800000
 ```
 
 #### Pending: 
-->API for Customer Approving the response is failing for some reason(but we have api for that). 
-->For now, we can mark "customer consent Approved" from UI after some timer to make it presentable.
+- API for Customer Approving the response is failing for some reason(but we have api for that). 
+- For now, we can mark "customer consent Approved" from UI after some timer to make it presentable.
 
