@@ -1,3 +1,11 @@
+Export below environment variables:
+
+export REDIRECT_URI=""
+export AUTH_USERNAME=""
+export AUTH_ACCOUNT=""
+export CLIENT_ID=""
+export CLIENT_SECRET=""
+
 Server:
 mvn spring-boot:run
 

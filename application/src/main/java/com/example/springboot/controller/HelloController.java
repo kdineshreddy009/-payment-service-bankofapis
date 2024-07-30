@@ -15,7 +15,6 @@ public class HelloController {
 	@PostMapping("/payment/consent/{financialId}")
 	public String requestPaymentConsentByFinancialId(String financialId) {
 		return paymentService.generatePaymentConsent(financialId);
-//		return "Greetings from Spring Boot!";
 	}
 
 }
