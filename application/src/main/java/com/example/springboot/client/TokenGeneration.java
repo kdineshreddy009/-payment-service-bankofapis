@@ -22,8 +22,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class TokenGeneration {
     private final String REQUEST_URL = "https://ob.sandbox.natwest.com/token";
     private final String GRANT_TYPE = "client_credentials";
-    private final String CLIENT_ID = "C8sICKZnnYXRNvC40jIYPk27UuGMzEJ5-zZ-RKYoMFY=";
-    private final String CLIENT_SECRET = "_2gAaWMDLcn6r-ToNsnAFEjKK9pw3D7AjIZC1k4oz34=";
+    private final String CLIENT_ID = System.getenv("CLIENT_ID");
+    private final String CLIENT_SECRET = System.getenv("CLIENT_SECRET");
     private final String SCOPE = "payments";
 
     @Autowired
@@ -33,6 +33,7 @@ public class TokenGeneration {
         MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
         map.add("grant_type", GRANT_TYPE);
         map.add("client_id", CLIENT_ID);
+        System.out.println("CLIENT_ID is "+CLIENT_ID);
         map.add("client_secret", CLIENT_SECRET);
         map.add("scope", SCOPE);
         HttpHeaders headers = new HttpHeaders();

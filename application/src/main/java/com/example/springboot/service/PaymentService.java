@@ -21,14 +21,14 @@ public class PaymentService {
 
     TokenGeneration tokenClient;
     RestTemplate restTemplate;
-    private final String CLIENT_ID = "C8sICKZnnYXRNvC40jIYPk27UuGMzEJ5-zZ-RKYoMFY=";
+    private final String CLIENT_ID = System.getenv("CLIENT_ID");
     private final String RESPONSE_TYPE = "code id_token";
     private final String SCOPE = "openid payments";
-    private final String REDIRECT_URI = "https%3A%2F%2F881199f9-3039-4e08-90f2-04571a7ef731.example.org%2Fredirect";
+    private final String REDIRECT_URI = System.getenv("REDIRECT_URI");
     private final String STATE = "ABC";
     private final String AUTH_MODE = "AUTO_POSTMAN";
-    private final String AUTH_USERNAME = "123456789012@881199f9-3039-4e08-90f2-04571a7ef731.example.org";
-    private final String AUTH_ACCOUT = "50000012345601";
+    private final String AUTH_USERNAME = System.getenv("AUTH_USERNAME");
+    private final String AUTH_ACCOUT = System.getenv("AUTH_ACCOUNT");
 
     @SneakyThrows
     public String generatePaymentConsent(String financialId) {

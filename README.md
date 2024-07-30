@@ -1,3 +1,12 @@
+#### Export below environment variables:
+```
+export REDIRECT_URI=""
+export AUTH_USERNAME=""
+export AUTH_ACCOUNT=""
+export CLIENT_ID=""
+export CLIENT_SECRET=""
+```
+
 #### Running Server in local: 
 ```mvn spring-boot:run```
 
